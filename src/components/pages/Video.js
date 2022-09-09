@@ -38,9 +38,7 @@ export default function Video() {
                         {content}
                     </div>
 
-                    {video?.id ? <RelatedVideos/> : isLoading ? <>
-                        <RelatedVideoLoader/>
-                        <RelatedVideoLoader/>
+                    {video?.id ? <RelatedVideos id={video.id} title={video.title}/> : isLoading ? <>
                         <RelatedVideoLoader/>
                     </> : <Error message="Something happened"/>}
                 </div>
